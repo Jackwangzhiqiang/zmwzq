@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .all {
+            width: 1000px;
+            height: 600px;
+            margin: 10px auto;
+            background-color: #c2ff3e;
+            position: relative;
+
+        }
+
+        .all .box {
+            width: 100px;
+            height: 100px;
+            /*float: left;*/
+            position: absolute;
+
+
+            border: 1px solid red;
+        }
+
+        #btn {
+            display: block;
+            width: 50px;
+            height: 30px;
+            background-color:yellow;
+            text-align:center;
+            line-height: 30px;
+            font-weight: 700;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+<input type="button" value="按钮" id="btn">
+<div class="all" id="all">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+</div>
+<script>
+    var btn = document.getElementById("btn");
+    var all = document.getElementById("all");
+    var boxs = all.children;
+    var arr = [];
+    var arr1 = [];
+
+    for (var i = 0; i < boxs.length; i++) {
+        boxs[i].index = i;
+        btn.onclick = function () {
+            for (var i = 0; i < boxs.length; i++) {
+                var n = Math.floor(900 * Math.random());
+                var m = Math.floor(500 * Math.random());
+                j=0;
+                var arr2=[];
+                for (var j = 0; j < 3; j++) {
+                    var w = Math.floor(255 * Math.random());
+                    arr2.push(w);
+                }
+                console.log(arr2);
+                boxs[i].style.left = "" + n + "px";
+                boxs[i].style.top = "" + m + "px";
+                boxs[i].style.backgroundColor="rgb("+arr2[0]+","+arr2[1]+","+arr2[2]+")";
+            }
+        }
+    }
+
+
+
+</script>
+</body>
+</html>
